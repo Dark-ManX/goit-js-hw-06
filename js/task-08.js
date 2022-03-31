@@ -1,5 +1,4 @@
 const formRef = document.querySelector('.login-form');
-// const submitBtnRef = document.querySelector('button');
 
 formRef.addEventListener('submit', onSubmitClick);
 
@@ -18,6 +17,9 @@ function onSubmitClick(event) {
         [email.name]: email.value,
         [password.name]: password.value,
     }
+    
     console.log(obj);
+    formRef.reset();
+
     return obj;
 }
