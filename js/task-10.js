@@ -23,15 +23,15 @@ function onCreateClick(event) {
 
   let size = 20;
   
-  for (let i = 0; i < inputRef.value; i += 1) {
+  for (let i = 0; i < Number(inputRef.value); i += 1) {
     console.log(i);
     size += 10;
-    divForCreatedEl.innerHTML = `<div width="${size}px" height="${size}px" background-color="${getRandomHexColor()}>`;
+    console.log(divForCreatedEl.innerHTML = `<div width="${size}px" height="${size}px" background-color="${getRandomHexColor()}">`);
   }
 };
 
 function onDestroyClick(event) {
-  divForCreatedEl.innerHTML = '';
+  console.log(divForCreatedEl.innerHTML = '');
 }
 
 function getRandomHexColor() {
