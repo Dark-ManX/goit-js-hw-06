@@ -15,8 +15,7 @@ const images = [
 
 const galleryEl = document.querySelector('.gallery');
 
-const htmlStringsToAdd = `<img url='${images[0].url}', alt='${images[0].alt}'>
-<img url='${images[1].url}', alt='${images[1].alt}'>
-<img url='${images[2].url}', alt='${images[2].alt}'>`;
+const htmlStringsToAdd = images.map(el => `<img url='${el.url}', alt='${el.alt}'>`);
+console.log(htmlStringsToAdd);
 
-galleryEl.insertAdjacentHTML('afterbegin', htmlStringsToAdd)
+galleryEl.insertAdjacentHTML('afterbegin', htmlStringsToAdd);

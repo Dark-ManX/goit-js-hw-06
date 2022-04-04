@@ -10,14 +10,10 @@ const arr = [...categoryEl.children]
 
 function getTitleAndLi(arr) {
     return arr.map(el => {
-        return {
-            Category: el.querySelector('h2').textContent,
-            Elements: el.querySelectorAll('li').length,
-    }
-    });
+        console.log(`Category: ${el.querySelector('h2').textContent} 
+Elements: ${el.querySelectorAll('li').length}`
+    )});
 }
-
-console.log(getTitleAndLi(arr));
 
 
 
